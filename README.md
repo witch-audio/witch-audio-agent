@@ -89,6 +89,11 @@ Skills are markdown files that give the agent deep knowledge and reusable proced
 | `mixing-mastering-assistant` | Mix translation, mastering discipline, finishing moves |
 | `audio-ml-workflows` | Practical AI pipelines for transcription, tagging, separation |
 | `stem-separation-and-tagging` | Stem splitting, labeling, organization, quality checks |
+| `supercollider` | Synthesis, patterns, and live-coded instrument workflows |
+| `audio-unit-testing` | Deterministic DSP testing, null tests, regressions |
+| `sample-library-tools` | Sample cleanup, naming, tagging, previews, organization |
+| `field-recording-workflows` | Capture, annotate, clean, archive, and reuse field recordings |
+| `podcast-and-voice-tooling` | Spoken-word cleanup, segmentation, transcript-aware workflows |
 
 ---
 

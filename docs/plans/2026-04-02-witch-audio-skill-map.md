@@ -42,6 +42,7 @@ Longer-tail layer:
 - supercollider
 - tidalcycles-live-coding
 - audio-unit-testing
+- sample-library-tools
 - field-recording-workflows
 - podcast-and-voice-tooling
 
