@@ -84,6 +84,11 @@ Skills are markdown files that give the agent deep knowledge and reusable proced
 | `spatial-audio` | Width, depth, localization, mono-safe spatial design |
 | `daw-plugin-qa` | Real DAW sessions as test harnesses for plugins |
 | `daw-music-production` | Music-making, arranging, and production help in DAWs |
+| `daw-automation-macos` | Mac DAW automation workflows for QA and music tasks |
+| `plugin-preset-design` | Preset bank design, naming, coverage, and product thinking |
+| `mixing-mastering-assistant` | Mix translation, mastering discipline, finishing moves |
+| `audio-ml-workflows` | Practical AI pipelines for transcription, tagging, separation |
+| `stem-separation-and-tagging` | Stem splitting, labeling, organization, quality checks |
 
 ---
 

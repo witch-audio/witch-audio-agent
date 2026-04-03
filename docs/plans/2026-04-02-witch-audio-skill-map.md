@@ -26,6 +26,11 @@ Strong follow-up layer:
 - rnbo
 - rust-audio
 - spatial-audio
+- daw-automation-macos
+- plugin-preset-design
+- mixing-mastering-assistant
+- audio-ml-workflows
+- stem-separation-and-tagging
 - audio-plugin-prototyping
 - cv-gate-modulation
 - sample-library-tools
@@ -37,8 +42,6 @@ Longer-tail layer:
 - supercollider
 - tidalcycles-live-coding
 - audio-unit-testing
-- stem-separation-workflows
-- mastering-and-loudness
 - field-recording-workflows
 - podcast-and-voice-tooling
 
