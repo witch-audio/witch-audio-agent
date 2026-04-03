@@ -66,6 +66,12 @@ Prefer:
 - one arrangement move
 - one thing to mute/delete if the session is bloated
 
+## Included workflow asset
+
+- `templates/8-bar-idea-to-arrangement.md`
+
+Use it when turning a loop into an actual song structure.
+
 ## Important reality
 
 If the agent is actually operating a DAW on the machine,

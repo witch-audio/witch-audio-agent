@@ -47,6 +47,13 @@ Do both.
 - ignoring extreme parameter values
 - pretending a passing test means good sound
 
+## Included workflow assets
+
+- `scripts/wav_null_test.py`
+- `templates/dsp-regression-checklist.md`
+
+Use the script for simple WAV null tests and the checklist for repeatable regression passes.
+
 ## Output style
 
 Prefer:

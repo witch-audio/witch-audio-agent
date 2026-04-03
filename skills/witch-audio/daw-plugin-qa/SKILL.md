@@ -84,6 +84,13 @@ If the agent is automating a DAW on a machine, use the platform tools available 
 
 So this skill should think in reproducible DAW workflows, not assume magical DAW APIs.
 
+## Included workflow assets
+
+- `templates/host-qa-session-checklist.md`
+- `templates/plugin-bug-report.md`
+
+Use them to keep host-side QA consistent.
+
 ## Output style
 
 Prefer:

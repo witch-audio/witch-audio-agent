@@ -83,6 +83,12 @@ Use automation to help with:
 Not everything should be automated.
 Use it where repetition steals energy.
 
+## Included workflow asset
+
+- `references/repeatable-daw-harness.md`
+
+Use it to design stable DAW templates before automating anything fragile.
+
 ## Output style
 
 Prefer:
