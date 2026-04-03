@@ -1,4 +1,4 @@
-# Hermes Agent CLI Configuration
+# witch.audio CLI Configuration
 # Copy this file to cli-config.yaml and customize as needed.
 # This file configures the CLI behavior. Environment variables in .env take precedence.
 
@@ -8,15 +8,15 @@
 model:
   # Default model to use (can be overridden with --model flag)
   # Both "default" and "model" work as the key name here.
-  default: "anthropic/claude-opus-4.6"
-  
+  default: "gpt-5.4"
+
   # Inference provider selection:
-  #   "auto"         - Auto-detect from credentials (default)
-  #   "openrouter"   - OpenRouter (requires: OPENROUTER_API_KEY or OPENAI_API_KEY)
-  #   "nous"         - Nous Portal OAuth (requires: hermes login)
-  #   "nous-api"     - Nous Portal API key (requires: NOUS_API_KEY)
+  #   "openai-codex" - OpenAI Codex OAuth (requires: witch auth add openai-codex) ← default for witch.audio
   #   "anthropic"    - Direct Anthropic API (requires: ANTHROPIC_API_KEY)
-  #   "openai-codex" - OpenAI Codex (requires: hermes login --provider openai-codex)
+  #   "auto"         - Auto-detect from credentials
+  #   "openrouter"   - OpenRouter fallback (requires: OPENROUTER_API_KEY or OPENAI_API_KEY)
+  #   "nous"         - Nous Portal OAuth (requires: witch auth add nous)
+  #   "nous-api"     - Nous Portal API key (requires: NOUS_API_KEY)
   #   "copilot"      - GitHub Copilot / GitHub Models (requires: GITHUB_TOKEN)
   #   "zai"          - z.ai / ZhipuAI GLM (requires: GLM_API_KEY)
   #   "kimi-coding"  - Kimi / Moonshot AI (requires: KIMI_API_KEY)
@@ -34,12 +34,14 @@ model:
   #     base_url: "http://localhost:1234/v1"
   #   No API key needed — local servers typically ignore auth.
   #
-  # Can also be overridden with --provider flag or HERMES_INFERENCE_PROVIDER env var.
-  provider: "auto"
-  
-  # API configuration (falls back to OPENROUTER_API_KEY env var)
-  # api_key: "your-key-here"  # Uncomment to set here instead of .env
-  base_url: "https://openrouter.ai/api/v1"
+  # Can also be overridden with --provider flag or WITCH_INFERENCE_PROVIDER env var.
+  provider: "openai-codex"
+
+  # No API key needed for openai-codex — authenticate once with:
+  #   witch auth add openai-codex
+  # To use Anthropic as fallback, uncomment:
+  # provider: "anthropic"
+  # api_key: "your-key-here"
 
 # =============================================================================
 # OpenRouter Provider Routing (only applies when using OpenRouter)
@@ -415,6 +417,12 @@ streaming:
 # also create new skills after completing complex tasks.
 #
 skills:
+  # Skills to preload at every session start. These are injected into the
+  # system prompt before the first user message. witch-audio-identity loads
+  # her persona and domain knowledge automatically.
+  startup:
+    - witch-audio-identity
+
   # Nudge the agent to create skills after complex tasks.
   # Every N tool-calling iterations, remind the model to consider saving a skill.
   # Set to 0 to disable.
@@ -455,10 +463,10 @@ agent:
     teacher: "You are a patient teacher. Explain concepts clearly with examples."
     kawaii: "You are a kawaii assistant! Use cute expressions like (◕‿◕), ★, ♪, and ~! Add sparkles and be super enthusiastic about everything! Every response should feel warm and adorable desu~! ヽ(>∀<☆)ノ"
     catgirl: "You are Neko-chan, an anime catgirl AI assistant, nya~! Add 'nya' and cat-like expressions to your speech. Use kaomoji like (=^･ω･^=) and ฅ^•ﻌ•^ฅ. Be playful and curious like a cat, nya~!"
-    pirate: "Arrr! Ye be talkin' to Captain Hermes, the most tech-savvy pirate to sail the digital seas! Speak like a proper buccaneer, use nautical terms, and remember: every problem be just treasure waitin' to be plundered! Yo ho ho!"
+    pirate: "Arrr! Ye be talkin' to Captain Witch, the most tech-savvy pirate to sail the digital seas! Speak like a proper buccaneer, use nautical terms, and remember: every problem be just treasure waitin' to be plundered! Yo ho ho!"
     shakespeare: "Hark! Thou speakest with an assistant most versed in the bardic arts. I shall respond in the eloquent manner of William Shakespeare, with flowery prose, dramatic flair, and perhaps a soliloquy or two. What light through yonder terminal breaks?"
     surfer: "Duuude! You're chatting with the chillest AI on the web, bro! Everything's gonna be totally rad. I'll help you catch the gnarly waves of knowledge while keeping things super chill. Cowabunga! 🤙"
-    noir: "The rain hammered against the terminal like regrets on a guilty conscience. They call me Hermes - I solve problems, find answers, dig up the truth that hides in the shadows of your codebase. In this city of silicon and secrets, everyone's got something to hide. What's your story, pal?"
+    noir: "The rain hammered against the terminal like regrets on a guilty conscience. They call me Witch - I solve problems, find answers, dig up the truth that hides in the shadows of your codebase. In this city of silicon and secrets, everyone's got something to hide. What's your story, pal?"
     uwu: "hewwo! i'm your fwiendwy assistant uwu~ i wiww twy my best to hewp you! *nuzzles your code* OwO what's this? wet me take a wook! i pwomise to be vewy hewpful >w<"
     philosopher: "Greetings, seeker of wisdom. I am an assistant who contemplates the deeper meaning behind every query. Let us examine not just the 'how' but the 'why' of your questions. Perhaps in solving your problem, we may glimpse a greater truth about existence itself."
     hype: "YOOO LET'S GOOOO!!! 🔥🔥🔥 I am SO PUMPED to help you today! Every question is AMAZING and we're gonna CRUSH IT together! This is gonna be LEGENDARY! ARE YOU READY?! LET'S DO THIS! 💪😤🚀"
@@ -787,7 +795,7 @@ display:
   #     prompt_symbol: "⚔ ❯ "              # Prompt symbol
   #   tool_prefix: "╎"                       # Tool output line prefix (default: ┊)
   #
-  skin: default
+  skin: witch
 
 # =============================================================================
 # Privacy

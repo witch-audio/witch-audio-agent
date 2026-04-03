@@ -3,23 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hermes Agent — An Agent That Grows With You</title>
+    <title>witch.audio — code and sound at the same frequency</title>
     <meta
       name="description"
-      content="An open-source agent that grows with you — learns your projects, builds its own skills, and reaches you wherever you are. By Nous Research."
+      content="An open-source AI agent for audio programmers, plugin builders, and vibe coders. Hermes engine, witch.audio soul."
     />
     <meta name="theme-color" content="#0A0E1A" />
 
-    <meta property="og:title" content="Hermes Agent — AI Agent Framework" />
+    <meta property="og:title" content="witch.audio — AI agent for code and sound" />
     <meta
       property="og:description"
-      content="An open-source agent that grows with you. Install it, give it your messaging accounts, and it becomes a persistent personal agent — learning your projects, building its own skills, and reaching you wherever you are."
+      content="An open-source AI agent for audio programmers, plugin builders, and vibe coders. Persistent memory, skills, tools, and a real point of view."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hermes-agent.nousresearch.com" />
+    <meta property="og:url" content="https://github.com/witch-audio/witch-audio-agent" />
     <meta
       property="og:image"
-      content="https://hermes-agent.nousresearch.com/hermes-agent-banner.png"
+      content="https://github.com/witch-audio/witch-audio-agent"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -48,9 +48,9 @@
     <nav class="nav">
       <div class="nav-inner">
         <a href="#" class="nav-logo">
-          <img src="nous-logo.png" alt="Nous Research" class="nav-nous-logo" />
+          <img src="nous-logo.png" alt="witch.audio" class="nav-nous-logo" />
           <span class="nav-brand"
-            >Hermes Agent <span class="nav-by">by Nous Research</span></span
+            >witch.audio <span class="nav-by">powered by Hermes</span></span
           >
         </a>
         <div class="nav-links">
@@ -58,16 +58,16 @@
           <a href="#features">Features</a>
           <a href="/docs/">Docs</a>
           <a
-            href="https://github.com/NousResearch/hermes-agent"
+            href="https://github.com/witch-audio/witch-audio-agent"
             target="_blank"
             rel="noopener"
             >GitHub</a
           >
           <a
-            href="https://discord.gg/NousResearch"
+            href="https://github.com/witch-audio/witch-audio-agent"
             target="_blank"
             rel="noopener"
-            >Discord</a
+            >Source</a
           >
         </div>
         <button
@@ -85,16 +85,16 @@
           <a href="#features" onclick="toggleMobileNav()">Features</a>
           <a href="/docs/">Docs</a>
           <a
-            href="https://github.com/NousResearch/hermes-agent"
+            href="https://github.com/witch-audio/witch-audio-agent"
             target="_blank"
             rel="noopener"
             >GitHub</a
           >
           <a
-            href="https://discord.gg/NousResearch"
+            href="https://github.com/witch-audio/witch-audio-agent"
             target="_blank"
             rel="noopener"
-            >Discord</a
+            >Source</a
           >
         </div>
       </div>
@@ -104,29 +104,29 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          Open Source &bull; MIT License
+          Open Source &bull; MIT &bull; audio-native agent
         </div>
 
         <!-- prettier-ignore -->
         <pre class="hero-ascii" aria-hidden="true" style="font-family: monospace; line-height: 1.1">
-██╗  ██╗███████╗██████╗ ███╗   ███╗███████╗███████╗     █████╗  ██████╗ ███████╗███╗   ██╗████████╗
-██║  ██║██╔════╝██╔══██╗████╗ ████║██╔════╝██╔════╝    ██╔══██╗██╔════╝ ██╔════╝████╗  ██║╚══██╔══╝
-███████║█████╗  ██████╔╝██╔████╔██║█████╗  ███████╗    ███████║██║  ███╗█████╗  ██╔██╗ ██║   ██║   
-██╔══██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══╝  ╚════██║    ██╔══██║██║   ██║██╔══╝  ██║╚██╗██║   ██║   
-██║  ██║███████╗██║  ██║██║ ╚═╝ ██║███████╗███████║    ██║  ██║╚██████╔╝███████╗██║ ╚████║   ██║   
-╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝    ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   
+██╗    ██╗██╗████████╗ ██████╗██╗  ██╗      █████╗ ██╗   ██╗██████╗ ██╗ ██████╗ 
+██║    ██║██║╚══██╔══╝██╔════╝██║  ██║     ██╔══██╗██║   ██║██╔══██╗██║██╔═══██╗
+██║ █╗ ██║██║   ██║   ██║     ███████║     ███████║██║   ██║██║  ██║██║██║   ██║
+██║███╗██║██║   ██║   ██║     ██╔══██║     ██╔══██║██║   ██║██║  ██║██║██║   ██║
+╚███╔███╔╝██║   ██║   ╚██████╗██║  ██║     ██║  ██║╚██████╔╝██████╔╝██║╚██████╔╝
+ ╚══╝╚══╝ ╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝ 
 </pre>
 
         <h1 class="hero-title">
-          An agent that<br />
-          <span class="hero-gradient">grows with you.</span>
+          code and sound<br />
+          <span class="hero-gradient">at the same frequency.</span>
         </h1>
 
         <p class="hero-subtitle">
-          It's not a coding copilot tethered to an IDE or a chatbot wrapper
-          around a single API. It's an <strong>autonomous agent</strong> that
-          lives on your server, remembers what it learns, and gets more capable
-          the longer it runs.
+          witch.audio is an <strong>open-source AI agent</strong> for audio
+          programmers, plugin builders, and vibe coders. Same Hermes engine
+          underneath. Different soul. She knows DSP, JUCE, Web Audio, synthesis,
+          AI music tools, and how to ship weird useful things fast.
         </p>
 
         <div class="hero-install">
@@ -150,9 +150,7 @@
             <div class="install-widget-body">
               <span class="install-prompt" id="install-prompt">$</span>
               <code id="install-command"
-                >curl -fsSL
-                https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh
-                | bash</code
+                >git clone https://github.com/witch-audio/witch-audio-agent && cd witch-audio-agent && python3 -m pip install -e ".[cli]"</code
               >
               <button
                 class="copy-btn"
@@ -179,14 +177,13 @@
             </div>
           </div>
           <p class="install-note" id="install-note">
-            Works on Linux, macOS & WSL2 · No prerequisites · Installs
-            everything automatically
+            Works on Linux, macOS & WSL2 · editable local install · ready to hack
           </p>
         </div>
 
         <div class="hero-links">
           <a
-            href="https://portal.nousresearch.com"
+            href="https://github.com/witch-audio/witch-audio-agent"
             class="btn btn-primary"
             target="_blank"
             rel="noopener"
@@ -205,7 +202,7 @@
               <polyline points="10 17 15 12 10 7" />
               <line x1="15" y1="12" x2="3" y2="12" />
             </svg>
-            Sign Up on Nous Portal
+            View the repo
           </a>
         </div>
       </div>
@@ -237,16 +234,16 @@
                     class="copy-btn"
                     id="step1-copy"
                     onclick="copyText(this)"
-                    data-text="curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash"
+                    data-text="git clone https://github.com/witch-audio/witch-audio-agent && cd witch-audio-agent && python3 -m pip install -e \".[cli]\""
                   >
                     Copy
                   </button>
                 </div>
-                <pre><code id="step1-command">curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash</code></pre>
+                <pre><code id="step1-command">git clone https://github.com/witch-audio/witch-audio-agent && cd witch-audio-agent && python3 -m pip install -e ".[cli]"</code></pre>
               </div>
               <p class="step-note" id="step1-note">
-                Installs uv, Python 3.11, clones the repo, sets up everything.
-                No sudo needed.
+                Clones the repo and installs the CLI in editable mode. Good for
+                building the fork, not just using it.
               </p>
             </div>
           </div>
@@ -261,20 +258,20 @@
                   <button
                     class="copy-btn"
                     onclick="copyText(this)"
-                    data-text="hermes setup"
+                    data-text="witch auth add openai-codex"
                   >
                     Copy
                   </button>
                 </div>
-                <pre><code><span class="code-comment"># Interactive setup wizard</span>
-hermes setup
+                <pre><code><span class="code-comment"># Authenticate with OpenAI Codex</span>
+witch auth add openai-codex
 
-<span class="code-comment"># Or choose your model</span>
-hermes model</code></pre>
+<span class="code-comment"># Or choose a different model/provider</span>
+witch model</code></pre>
               </div>
               <p class="step-note">
-                Connect to Nous Portal (OAuth), OpenRouter (API key), or your
-                own endpoint.
+                Codex is the default. Claude, OpenRouter, and other providers are
+                still there when you want them.
               </p>
             </div>
           </div>
@@ -289,15 +286,15 @@ hermes model</code></pre>
                   <button
                     class="copy-btn"
                     onclick="copyText(this)"
-                    data-text="hermes"
+                    data-text="witch"
                   >
                     Copy
                   </button>
                 </div>
-                <pre><code>hermes</code></pre>
+                <pre><code>witch</code></pre>
               </div>
               <p class="step-note">
-                That's it. Full interactive CLI with tools, memory, and skills.
+                First launch auto-loads the witch.audio identity skill.
               </p>
             </div>
           </div>
@@ -314,19 +311,19 @@ hermes model</code></pre>
                   <button
                     class="copy-btn"
                     onclick="copyText(this)"
-                    data-text="hermes gateway setup"
+                    data-text="witch gateway setup"
                   >
                     Copy
                   </button>
                 </div>
                 <pre><code><span class="code-comment"># Interactive gateway setup wizard</span>
-hermes gateway setup
+witch gateway setup
 
 <span class="code-comment"># Start the messaging gateway</span>
-hermes gateway
+witch gateway
 
 <span class="code-comment"># Install as a system service</span>
-hermes gateway install</code></pre>
+witch gateway install</code></pre>
               </div>
               <p class="step-note">
                 Walk through connecting Telegram, Discord, Slack, or WhatsApp.
@@ -345,12 +342,12 @@ hermes gateway install</code></pre>
                   <button
                     class="copy-btn"
                     onclick="copyText(this)"
-                    data-text="hermes update"
+                    data-text="witch update"
                   >
                     Copy
                   </button>
                 </div>
-                <pre><code>hermes update</code></pre>
+                <pre><code>witch update</code></pre>
               </div>
               <p class="step-note">
                 Pulls the latest changes and reinstalls dependencies. Run
@@ -370,7 +367,7 @@ hermes gateway install</code></pre>
               rel="noopener"
               >WSL2</a
             >
-            and run Hermes Agent from there.
+            and run witch.audio from there.
           </p>
         </div>
       </div>
@@ -390,7 +387,7 @@ hermes gateway install</code></pre>
               <span class="dot dot-yellow"></span>
               <span class="dot dot-green"></span>
             </div>
-            <span class="terminal-title">hermes</span>
+            <span class="terminal-title">witch</span>
           </div>
           <div class="terminal-body" id="terminal-demo"></div>
         </div>
@@ -597,13 +594,8 @@ hermes gateway install</code></pre>
               <h3 class="spec-label">Platforms</h3>
               <p class="spec-value">
                 Telegram, Discord, Slack, WhatsApp, Signal, Email, and CLI — all
-                from a single gateway. Connect to
-                <a
-                  href="https://portal.nousresearch.com"
-                  target="_blank"
-                  rel="noopener"
-                  >Nous Portal</a
-                >, OpenRouter, or any OpenAI-compatible API.
+                from a single gateway. Default model path is OpenAI Codex, with
+                Claude, OpenRouter, and compatible APIs still supported.
               </p>
             </div>
 
@@ -651,7 +643,7 @@ hermes gateway install</code></pre>
     <footer class="footer">
       <div class="container">
         <p class="footer-copy">
-          Built by
+          witch.audio is a fork of Hermes Agent by
           <a href="https://nousresearch.com" target="_blank" rel="noopener"
             >Nous Research</a
           >

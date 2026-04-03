@@ -1,16 +1,16 @@
 // =========================================================================
-// Hermes Agent Landing Page — Interactions
+// witch.audio Landing Page — Interactions
 // =========================================================================
 
 // --- Platform install commands ---
 const PLATFORMS = {
   linux: {
     command:
-      "curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash",
+      'git clone https://github.com/witch-audio/witch-audio-agent && cd witch-audio-agent && python3 -m pip install -e ".[cli]"',
     prompt: "$",
-    note: "Works on Linux, macOS & WSL2 · No prerequisites · Installs everything automatically",
+    note: "Works on Linux, macOS & WSL2 · editable local install · ready to hack",
     stepNote:
-      "Installs uv, Python 3.11, clones the repo, sets up everything. No sudo needed.",
+      "Clones the repo and installs the CLI in editable mode. Good for building the fork, not just using it.",
   },
 };
 
@@ -164,7 +164,7 @@ const demoSequence = [
   { type: "prompt", text: "❯ " },
   {
     type: "type",
-    text: "Research the latest approaches to GRPO training and write a summary",
+    text: "Help me design a dreamy Web Audio synth for a one-page app",
     delay: 30,
   },
   { type: "pause", ms: 600 },
@@ -172,35 +172,21 @@ const demoSequence = [
     type: "output",
     lines: [
       "",
-      '<span class="t-dim">  web_search "GRPO reinforcement learning 2026"       1.2s</span>',
+      '<span class="t-dim">  skill_view web-audio-api                              0.5s</span>',
     ],
   },
   { type: "pause", ms: 400 },
   {
     type: "output",
     lines: [
-      '<span class="t-dim">  web_extract arxiv.org/abs/2402.03300                3.1s</span>',
+      '<span class="t-dim">  skill_view synthesis-recipes                         0.4s</span>',
     ],
   },
   { type: "pause", ms: 400 },
   {
     type: "output",
     lines: [
-      '<span class="t-dim">  web_search "GRPO vs PPO ablation results"           0.9s</span>',
-    ],
-  },
-  { type: "pause", ms: 400 },
-  {
-    type: "output",
-    lines: [
-      '<span class="t-dim">  web_extract huggingface.co/blog/grpo                2.8s</span>',
-    ],
-  },
-  { type: "pause", ms: 400 },
-  {
-    type: "output",
-    lines: [
-      '<span class="t-dim">  write_file ~/research/grpo-summary.md               0.1s</span>',
+      '<span class="t-dim">  write_file ~/projects/dream-synth-plan.md            0.1s</span>',
     ],
   },
   { type: "pause", ms: 500 },
@@ -208,13 +194,13 @@ const demoSequence = [
     type: "output",
     lines: [
       "",
-      '<span class="t-text">Done! I\'ve written a summary covering:</span>',
+      '<span class="t-text">Done. Start with:</span>',
       "",
-      '<span class="t-text">  <span class="t-green">✓</span> GRPO\'s group-relative advantage (no critic model needed)</span>',
-      '<span class="t-text">  <span class="t-green">✓</span> Comparison with PPO/DPO on reasoning benchmarks</span>',
-      '<span class="t-text">  <span class="t-green">✓</span> Implementation notes for Axolotl and TRL</span>',
+      '<span class="t-text">  <span class="t-green">✓</span> one AudioContext unlocked by click</span>',
+      '<span class="t-text">  <span class="t-green">✓</span> 2 detuned saw voices into a low-pass filter</span>',
+      '<span class="t-text">  <span class="t-green">✓</span> slow LFO on cutoff + chorus + long reverb</span>',
       "",
-      '<span class="t-text">Saved to</span> <span class="t-accent">~/research/grpo-summary.md</span>',
+      '<span class="t-text">Saved to</span> <span class="t-accent">~/projects/dream-synth-plan.md</span>',
     ],
   },
   { type: "pause", ms: 2500 },
@@ -223,7 +209,7 @@ const demoSequence = [
   { type: "prompt", text: "❯ " },
   {
     type: "type",
-    text: "Review the PR at NousResearch/hermes-agent#42 and fix any issues",
+    text: "Review the PR at witch-audio/witch-audio-agent#42 and fix any issues",
     delay: 30,
   },
   { type: "pause", ms: 600 },

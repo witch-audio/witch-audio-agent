@@ -3,12 +3,12 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "hermes-agent"
+name = "witch-audio-agent"
 version = "0.6.0"
-description = "The self-improving AI agent — creates skills from experience, improves them during use, and runs anywhere"
+description = "witch.audio — an open-source AI agent at the intersection of code and sound. Audio programming, vibe coding, and the future of agentic tools."
 readme = "README.md"
 requires-python = ">=3.11"
-authors = [{ name = "Nous Research" }]
+authors = [{ name = "witch audio" }]
 license = { text = "MIT" }
 dependencies = [
   # Core — pinned to known-good ranges to limit supply chain attack surface
@@ -73,30 +73,30 @@ rl = [
 ]
 yc-bench = ["yc-bench @ git+https://github.com/collinear-ai/yc-bench.git ; python_version >= '3.12'"]
 all = [
-  "hermes-agent[modal]",
-  "hermes-agent[daytona]",
-  "hermes-agent[messaging]",
-  "hermes-agent[matrix]",
-  "hermes-agent[cron]",
-  "hermes-agent[cli]",
-  "hermes-agent[dev]",
-  "hermes-agent[tts-premium]",
-  "hermes-agent[slack]",
-  "hermes-agent[pty]",
-  "hermes-agent[honcho]",
-  "hermes-agent[mcp]",
-  "hermes-agent[homeassistant]",
-  "hermes-agent[sms]",
-  "hermes-agent[acp]",
-  "hermes-agent[voice]",
-  "hermes-agent[dingtalk]",
-  "hermes-agent[feishu]",
+  "witch-audio-agent[modal]",
+  "witch-audio-agent[daytona]",
+  "witch-audio-agent[messaging]",
+  "witch-audio-agent[matrix]",
+  "witch-audio-agent[cron]",
+  "witch-audio-agent[cli]",
+  "witch-audio-agent[dev]",
+  "witch-audio-agent[tts-premium]",
+  "witch-audio-agent[slack]",
+  "witch-audio-agent[pty]",
+  "witch-audio-agent[honcho]",
+  "witch-audio-agent[mcp]",
+  "witch-audio-agent[homeassistant]",
+  "witch-audio-agent[sms]",
+  "witch-audio-agent[acp]",
+  "witch-audio-agent[voice]",
+  "witch-audio-agent[dingtalk]",
+  "witch-audio-agent[feishu]",
 ]
 
 [project.scripts]
-hermes = "hermes_cli.main:main"
-hermes-agent = "run_agent:main"
-hermes-acp = "acp_adapter.entry:main"
+witch = "hermes_cli.main:main"
+witch-agent = "run_agent:main"
+witch-acp = "acp_adapter.entry:main"
 
 [tool.setuptools]
 py-modules = ["run_agent", "model_tools", "toolsets", "batch_runner", "trajectory_compressor", "toolset_distributions", "cli", "hermes_constants", "hermes_state", "hermes_time", "rl_cli", "utils"]
