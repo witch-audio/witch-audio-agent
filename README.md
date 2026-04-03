@@ -73,6 +73,17 @@ Skills are markdown files that give the agent deep knowledge and reusable proced
 | `vibe-coding` | Fast ideation and shipping with AI tools |
 | `suno-udio-prompting` | Prompt engineering for AI music tools |
 | `plugin-qa` | Automated QA checklist for audio plugins |
+| `realtime-audio-cpp` | Audio-thread safety, lock-free patterns, performance |
+| `faust-dsp` | DSP prototyping and export workflows with FAUST |
+| `audio-analysis-measurement` | Spectrograms, loudness, phase, null tests, measurement |
+| `plugin-release-pipeline` | Pre-release checks, packaging, metadata, shipping |
+| `audio-ui-ux` | Better controls, meters, parameter naming, plugin UX |
+| `max-msp-gen` | Max patching and gen~ production flow |
+| `rnbo` | Portable patch/export workflows from Max into products |
+| `rust-audio` | Realtime-safe Rust audio architecture and tooling |
+| `spatial-audio` | Width, depth, localization, mono-safe spatial design |
+| `daw-plugin-qa` | Real DAW sessions as test harnesses for plugins |
+| `daw-music-production` | Music-making, arranging, and production help in DAWs |
 
 ---
 
