@@ -94,6 +94,9 @@ Skills are markdown files that give the agent deep knowledge and reusable proced
 | `sample-library-tools` | Sample cleanup, naming, tagging, previews, organization |
 | `field-recording-workflows` | Capture, annotate, clean, archive, and reuse field recordings |
 | `podcast-and-voice-tooling` | Spoken-word cleanup, segmentation, transcript-aware workflows |
+| `ableton-live-workflows` | Ableton-specific plugin QA and production workflows |
+| `logic-pro-workflows` | Logic-specific AU QA, recall, and production workflows |
+| `reaper-workflows` | REAPER-specific routing, render, and plugin test workflows |
 
 ---
 
