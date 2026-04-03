@@ -9,12 +9,12 @@ from pathlib import Path
 
 
 def get_hermes_home() -> Path:
-    """Return the Hermes home directory (default: ~/.hermes).
+    """Return the runtime home directory (default: ~/.witch-audio for this fork).
 
-    Reads HERMES_HOME env var, falls back to ~/.hermes.
+    Reads HERMES_HOME env var, falls back to ~/.witch-audio.
     This is the single source of truth — all other copies should import this.
     """
-    return Path(os.getenv("HERMES_HOME", Path.home() / ".hermes"))
+    return Path(os.getenv("HERMES_HOME", Path.home() / ".witch-audio"))
 
 
 def get_optional_skills_dir(default: Path | None = None) -> Path:
