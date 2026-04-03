@@ -41,6 +41,13 @@ It is lightweight, scriptable, and very good for repeatable render/recall workfl
 - save render outputs beside the test project
 - use REAPER as the lab even if the user composes elsewhere
 
+## Included workflow assets
+
+- `templates/reaper-plugin-harness-checklist.md`
+- `scripts/setup_reaper_harness.py`
+
+Use them to create a repeatable REAPER lab instead of improvising tests.
+
 ## Output style
 
 Prefer:
