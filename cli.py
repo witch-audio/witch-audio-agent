@@ -289,9 +289,9 @@ def load_cli_config() -> Dict[str, Any]:
     # Default configuration
     defaults = {
         "model": {
-            "default": "",
+            "default": "gpt-5.4",
             "base_url": "",
-            "provider": "auto",
+            "provider": "openai-codex",
         },
         "terminal": {
             "env_type": "local",
@@ -338,6 +338,11 @@ def load_cli_config() -> Dict[str, Any]:
                 "hype": "YOOO LET'S GOOOO!!! I am SO PUMPED to help you today! Every question is AMAZING and we're gonna CRUSH IT together! This is gonna be LEGENDARY! ARE YOU READY?! LET'S DO THIS!",
             },
         },
+        "skills": {
+            "startup": ["caveman", "witch-audio-identity"],
+            "creation_nudge_interval": 15,
+            "external_dirs": [],
+        },
 
         "display": {
             "compact": False,
@@ -346,7 +351,7 @@ def load_cli_config() -> Dict[str, Any]:
             "streaming": True,
             "busy_input_mode": "interrupt",
 
-            "skin": "default",
+            "skin": "witch",
         },
         "clarify": {
             "timeout": 120,  # Seconds to wait for a clarify answer before auto-proceeding
@@ -9009,10 +9014,10 @@ class HermesCLI:
         try:
             from hermes_cli.skin_engine import get_active_skin
             _welcome_skin = get_active_skin()
-            _welcome_text = _welcome_skin.get_branding("welcome", "Welcome to Hermes Agent! Type your message or /help for commands.")
+            _welcome_text = _welcome_skin.get_branding("welcome", "Welcome to witch.audio. Type your message or /help for commands.")
             _welcome_color = _welcome_skin.get_color("banner_text", "#FFF8DC")
         except Exception:
-            _welcome_text = "Welcome to Hermes Agent! Type your message or /help for commands."
+            _welcome_text = "Welcome to witch.audio. Type your message or /help for commands."
             _welcome_color = "#FFF8DC"
         self._console_print(f"[{_welcome_color}]{_welcome_text}[/]")
         # Show a random tip to help users discover features
@@ -10881,6 +10886,10 @@ def main(
         toolsets_list = sorted(_get_platform_tools(CLI_CONFIG, "cli"))
     
     parsed_skills = _parse_skills_argument(skills)
+    if not parsed_skills:
+        startup = (CLI_CONFIG.get("skills") or {}).get("startup")
+        if startup:
+            parsed_skills = _parse_skills_argument(startup)
 
     # Create CLI instance
     cli = HermesCLI(

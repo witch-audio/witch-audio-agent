@@ -1,4 +1,4 @@
-# Hermes Agent CLI Configuration
+# witch.audio CLI Configuration
 # Copy this file to cli-config.yaml and customize as needed.
 # This file configures the CLI behavior. Environment variables in .env take precedence.
 
@@ -8,7 +8,7 @@
 model:
   # Default model to use (can be overridden with --model flag)
   # Both "default" and "model" work as the key name here.
-  default: "anthropic/claude-opus-4.6"
+  default: "gpt-5.4"
   
   # Inference provider selection:
   #   "auto"         - Auto-detect from credentials (default)
@@ -39,12 +39,14 @@ model:
   #     base_url: "http://localhost:1234/v1"
   #   No API key needed — local servers typically ignore auth.
   #
-  # Can also be overridden with --provider flag or HERMES_INFERENCE_PROVIDER env var.
-  provider: "auto"
-  
-  # API configuration (falls back to OPENROUTER_API_KEY env var)
-  # api_key: "your-key-here"  # Uncomment to set here instead of .env
-  base_url: "https://openrouter.ai/api/v1"
+  # Can also be overridden with --provider flag or WITCH_INFERENCE_PROVIDER env var.
+  provider: "openai-codex"
+
+  # No API key needed for openai-codex — authenticate once with:
+  #   witch auth add openai-codex
+  # To use Anthropic or OpenRouter instead, change provider and uncomment api_key/base_url as needed.
+  # api_key: "your-key-here"
+  # base_url: "https://openrouter.ai/api/v1"
 
   # ── Token limits — two settings, easy to confuse ──────────────────────────
   #
@@ -469,6 +471,11 @@ streaming:
 # also create new skills after completing complex tasks.
 #
 skills:
+  # Skills to preload at every session start.
+  startup:
+    - caveman
+    - witch-audio-identity
+
   # Nudge the agent to create skills after complex tasks.
   # Every N tool-calling iterations, remind the model to consider saving a skill.
   # Set to 0 to disable.
@@ -886,7 +893,7 @@ display:
   #     prompt_symbol: "⚔ ❯ "              # Prompt symbol
   #   tool_prefix: "╎"                       # Tool output line prefix (default: ┊)
   #
-  skin: default
+  skin: witch
 
 # =============================================================================
 # Model Aliases — short names for /model command

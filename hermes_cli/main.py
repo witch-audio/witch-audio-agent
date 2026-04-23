@@ -6510,42 +6510,42 @@ def cmd_logs(args):
 def main():
     """Main entry point for hermes CLI."""
     parser = argparse.ArgumentParser(
-        prog="hermes",
-        description="Hermes Agent - AI assistant with tool-calling capabilities",
+        prog="witch",
+        description="witch.audio - AI audio agent with tool-calling capabilities",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-    hermes                        Start interactive chat
-    hermes chat -q "Hello"        Single query mode
-    hermes -c                     Resume the most recent session
-    hermes -c "my project"        Resume a session by name (latest in lineage)
-    hermes --resume <session_id>  Resume a specific session by ID
-    hermes setup                  Run setup wizard
-    hermes logout                 Clear stored authentication
-    hermes auth add <provider>    Add a pooled credential
-    hermes auth list              List pooled credentials
-    hermes auth remove <p> <t>    Remove pooled credential by index, id, or label
-    hermes auth reset <provider>  Clear exhaustion status for a provider
-    hermes model                  Select default model
-    hermes config                 View configuration
-    hermes config edit            Edit config in $EDITOR
-    hermes config set model gpt-4 Set a config value
-    hermes gateway                Run messaging gateway
-    hermes -s hermes-agent-dev,github-auth
-    hermes -w                     Start in isolated git worktree
-    hermes gateway install        Install gateway background service
-    hermes sessions list          List past sessions
-    hermes sessions browse        Interactive session picker
-    hermes sessions rename ID T   Rename/title a session
-    hermes logs                   View agent.log (last 50 lines)
-    hermes logs -f                Follow agent.log in real time
-    hermes logs errors            View errors.log
-    hermes logs --since 1h        Lines from the last hour
-    hermes debug share             Upload debug report for support
-    hermes update                 Update to latest version
+    witch                         Start interactive chat
+    witch chat -q "Hello"         Single query mode
+    witch -c                      Resume the most recent session
+    witch -c "my project"         Resume a session by name (latest in lineage)
+    witch --resume <session_id>   Resume a specific session by ID
+    witch setup                   Run setup wizard
+    witch logout                  Clear stored authentication
+    witch auth add <provider>     Add a pooled credential
+    witch auth list               List pooled credentials
+    witch auth remove <p> <t>     Remove pooled credential by index, id, or label
+    witch auth reset <provider>   Clear exhaustion status for a provider
+    witch model                   Select default model
+    witch config                  View configuration
+    witch config edit             Edit config in $EDITOR
+    witch config set model gpt-4  Set a config value
+    witch gateway                 Run messaging gateway
+    witch -s witch-audio-identity,github-auth
+    witch -w                      Start in isolated git worktree
+    witch gateway install         Install gateway background service
+    witch sessions list           List past sessions
+    witch sessions browse         Interactive session picker
+    witch sessions rename ID T    Rename/title a session
+    witch logs                    View agent.log (last 50 lines)
+    witch logs -f                 Follow agent.log in real time
+    witch logs errors             View errors.log
+    witch logs --since 1h         Lines from the last hour
+    witch debug share             Upload debug report for support
+    witch update                  Update to latest version
 
 For more help on a command:
-    hermes <command> --help
+    witch <command> --help
 """,
     )
 
@@ -6628,7 +6628,7 @@ For more help on a command:
     chat_parser = subparsers.add_parser(
         "chat",
         help="Interactive chat with the agent",
-        description="Start an interactive chat session with Hermes Agent",
+        description="Start an interactive chat session with witch.audio",
     )
     chat_parser.add_argument(
         "-q", "--query", help="Single query (non-interactive mode)"

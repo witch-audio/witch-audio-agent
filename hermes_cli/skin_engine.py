@@ -636,6 +636,68 @@ _BUILTIN_SKINS: Dict[str, Dict[str, Any]] = {
 [#F29C38]⠀⠀⠀⠀⠀⠀⠀⣼⡟⠀⠀⢻⣧⠀⠀⠀⠀⠀⠀⠀⠀[/]
 [dim #7A3511]⠀⠀⠀⠀⠀⠀⠀tail flame lit⠀⠀⠀⠀⠀⠀⠀⠀[/]""",
     },
+    "witch": {
+        "name": "witch",
+        "description": "witch.audio — dark blue midnight skin",
+        "colors": {
+            "banner_border": "#2A5D8F",
+            "banner_title": "#A7D8FF",
+            "banner_accent": "#6EBBFF",
+            "banner_dim": "#5E7FA0",
+            "banner_text": "#F2F8FF",
+            "ui_accent": "#6EBBFF",
+            "ui_label": "#9CCEFF",
+            "ui_ok": "#7BE0BE",
+            "ui_error": "#FF9A9A",
+            "ui_warn": "#FFD27A",
+            "prompt": "#F2F8FF",
+            "input_rule": "#2A5D8F",
+            "response_border": "#6EBBFF",
+            "session_label": "#9CCEFF",
+            "session_border": "#4C7FA8",
+        },
+        "spinner": {
+            "waiting_faces": ["(◌)", "(✦)", "(≈)", "(◒)", "(⋆)"],
+            "thinking_faces": ["(◌)", "(✦)", "(≈)", "(⋆)", "(◒)"],
+            "thinking_verbs": [
+                "tuning the signal", "reading the waveform", "staring into the buffer",
+                "casting blue noise", "aligning harmonics", "listening for ghosts",
+                "routing the current", "shaping the reverb tail",
+            ],
+            "wings": [
+                ["⟪✦", "✦⟫"],
+                ["⟪≈", "≈⟫"],
+                ["⟪◌", "◌⟫"],
+                ["⟪⋆", "⋆⟫"],
+            ],
+        },
+        "branding": {
+            "agent_name": "witch.audio",
+            "welcome": "Welcome to witch.audio. Type your message or /help for commands.",
+            "goodbye": "Signal fades. ✦",
+            "response_label": " ✦ witch.audio ",
+            "prompt_symbol": "✦ ❯ ",
+            "help_header": "(✦) Available Commands",
+        },
+        "tool_prefix": "│",
+        "banner_logo": """[bold #B6DEFF]██╗    ██╗██╗████████╗ ██████╗██╗  ██╗       █████╗ ██╗   ██╗██████╗ ██╗ ██████╗[/]
+[bold #8BC4FF]██║    ██║██║╚══██╔══╝██╔════╝██║  ██║      ██╔══██╗██║   ██║██╔══██╗██║██╔═══██╗[/]
+[#63B4FF]██║ █╗ ██║██║   ██║   ██║     ███████║█████╗███████║██║   ██║██║  ██║██║██║   ██║[/]
+[#4FA7FF]██║███╗██║██║   ██║   ██║     ██╔══██║╚════╝██╔══██║██║   ██║██║  ██║██║██║   ██║[/]
+[#2C82D9]╚███╔███╔╝██║   ██║   ╚██████╗██║  ██║      ██║  ██║╚██████╔╝██████╔╝██║╚██████╔╝[/]
+[#163965] ╚══╝╚══╝ ╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝      ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝[/]""",
+        "banner_hero": """[#163965]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+[#234B78]⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀[/]
+[#4FA7FF]⠀⠀⠀⠀⠀⠀⠀⣴⣿⠟⠁✦⠈⠻⣿⣦⠀⠀⠀⠀⠀⠀⠀[/]
+[#8BC4FF]⠀⠀⠀⠀⠀⠀⣼⣿⠃⠀⣀⣀⣀⠀⠘⣿⣧⠀⠀⠀⠀⠀⠀[/]
+[#B6DEFF]⠀⠀⠀⠀⠀⠀⣿⣿⠀⢰⣿⣿⣿⡆⠀⣿⣿⠀⠀⠀⠀⠀⠀[/]
+[#8BC4FF]⠀⠀⠀⠀⠀⠀⣿⣿⠀⠈⠻⠿⠟⠁⠀⣿⣿⠀⠀⠀⠀⠀⠀[/]
+[#4FA7FF]⠀⠀⠀⠀⠀⠀⠹⣿⣆⠀⠀⠀⠀⠀⣰⣿⠏⠀⠀⠀⠀⠀⠀[/]
+[#234B78]⠀⠀⠀⠀⠀⠀⠀⠙⢿⣷⣦⣤⣴⣾⡿⠋⠀⠀⠀⠀⠀⠀⠀[/]
+[#163965]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+[#4FA7FF]⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ code ≈ sound⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[/]
+[dim #234B78]⠀⠀⠀⠀⠀⠀⠀⠀dark blue online⠀⠀⠀⠀⠀⠀⠀⠀[/]""",
+    },
 }
 
 

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "name": "hermes-agent",
-  "display_name": "Hermes Agent",
-  "description": "AI agent by Nous Research with 90+ tools, persistent memory, and multi-platform support",
+  "name": "witch-audio-agent",
+  "display_name": "witch.audio",
+  "description": "AI agent for audio programmers and vibe coders, powered by the Hermes engine",
   "icon": "icon.svg",
   "distribution": {
     "type": "command",
-    "command": "hermes",
+    "command": "witch",
     "args": ["acp"]
   }
 }
